@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Steganography Techniques.</title>
+        <link rel="stylesheet" href="new.css">
+        
+    </head>
+
+    <body>
+        <div id="particles-js">
+            <div class="banner">
+                <div class="navbar">
+                    <img class="logo" src="logo.png">
+                    <ul>
+                        <li><a href="audio.html">Audio</a></li>
+                        <li><a href="new.html">Image</a></li>
+                    </ul>
+                </div>
+    
+                <div class="content">
+                    <h1>Steganography Techniques</h1>
+                    <p>Encode and decode data im images and multimedia. <br>Hide data in plain sight.</p>
+                    <a href="#encodeSec"><button id="button1"><span class="span1"></span>ENCODING</button></a>
+                    <a href="#decodeSec"><button id="button2"><span class="span2"></span>DECODING</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="hiderow" id="encodeSec">
+                <div class="grid1">
+                    <div>
+                        <p id="span1Text">Cover Image:</p> 
+                        <input type="file" id="upload"><br>
+                    </div>
+                    <div class="image-preview" id="imagePreview">
+                        <img src="" alt="Image Preview" class="image-preview-image">
+                        <span class="image-preview-default-text">Image Preview</span>
+                    </div>
+
+                    <div>
+                        <p id="span2Text">Secret data:</p><!--<input type="file" id="upload2"><br>-->
+                        <input type="text" id="stegoText">
+                    
+                    </div>
+                        
+                    <button type="file" id="send" onclick="onEncodeClicked()">ENCODE</button>
+                </div>
+                
+                
+
+                
+
+                <div class="grid3">
+                    <div>
+                        <p id="span3Text">Result Image:</p>
+                        <img id="stegImg" src="">
+                    </div>
+                    <div class="image-preview3" id="imagePreview3">
+                        <img src="" alt="Image Preview3" class="image-preview-image3" id="stegImg">
+                        <span class="image-preview-default-text3">Image Preview</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            
+            <div class="decoderow" id="decodeSec">
+                <div class="grid4">
+                    <div>
+                        <p id="span1Text">Stego Image:</p> 
+                        <input type="file" id="upload2"><br>
+                    </div>
+                    <div class="image-preview2" id="imagePreview2">
+                        <img src="" alt="Image Preview2" class="image-preview-image2">
+                        <span class="image-preview-default-text2">Image Preview</span>
+                    </div>
+
+                    <button type="file" id="send" onclick="onDecodeClicked()">DECODE</button>
+                </div>
+
+                <!--
+                <div class="grid5">
+                    <span id="secretText">Result Text: </span>   
+                </div>
+                -->
+                
+            </div>
+            
+
+        </div>
+
+
+        <script src="new.js" defer></script>
+        <script type="text/javascript" src="particles.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+
+    
+
+    </body>
+</html>

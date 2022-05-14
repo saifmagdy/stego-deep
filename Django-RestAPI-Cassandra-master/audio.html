@@ -1,0 +1,114 @@
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="audio.css">
+        <title>Audio Steganography</title>
+        
+    </head>
+
+    <body>
+        <div id="particles-js">
+            <div class="banner">
+                <div class="navbar">
+                    <img class="logo" src="logo.png">
+                    <ul>
+                        <li><a href="audio.html">Audio</a></li>
+                        <li><a href="new.html">Image</a></li>
+                    </ul>
+                </div>
+    
+                <div class="content">
+                    <h1>Steganography Techniques</h1>
+                    <p>Encode and decode data im images and multimedia. <br>Hide data in plain sight.</p>
+                    <a href="#encodeSec"><button id="button1"><span class="span1"></span>ENCODING</button></a>
+                    <a href="#decodeSec"><button id="button2"><span class="span2"></span>DECODING</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="hiderow" id="encodeSec">
+
+                <div class="grid1">
+                    <label for="techniques">Choose a encoding technique:</label>
+
+                    <select id="box1"  onchange="choose_encodetech(this)">
+                            
+                        <option value="one">encode lsb</option>
+                        <option value="two">encode 2 lsb</option>
+
+                    </select>
+                            
+                    <input type='file' id="input" onchange='openFile(event)' >
+                    <audio id="audio" controls></audio>
+                    <button type="file" id="send" onclick="submitencode()">ENCODE</button>
+
+                </div>
+
+                <div class="grid2">
+                    <div>
+                        <p id="span2Text">Secret data:</p>
+                        <input type="text" id="text2">
+                    
+                    </div>
+    
+                </div>
+        
+
+                <div class="grid3">
+                    <div>
+                        <p>Result Audio:</p>
+                    </div>
+
+                    <div>
+                        <audio id="resultsound" src="" controls>  <source id="audioSource" src=""></source></audio>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="decoderow" id="decodeSec">
+
+                <div class="grid4">
+                    <div>
+
+                        <label for="techniques">Choose a decoding technique: </label>
+                        <select id="box2" onchange="choose_encodetech(this)">
+                        <option value="oned">decode lsb</option>
+                        <option value="twod">decode 2 lsb</option>
+
+                        </select>
+                        
+                        
+                        <input type='file' id="input" onchange='openFile2(event)'>
+                        <audio id="audio2" controls></audio>
+                        <button type="file" id="send" onclick="submitdecode()" >DECODE</button>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="audio.js" defer></script>
+        <script type="text/javascript" src="particles.js"></script>
+
+    </body>
+</html>
